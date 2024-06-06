@@ -24,14 +24,16 @@ main{
     background-color: #232931;
     flex-wrap: wrap;
     position: relative;
-    border-radius: 15px;
+    border-radius: 1.5rem;
     color: #fff;
+    position: relative;
 }
 .left-info{
-    height: 100%;
+    height: 105%;
     width: 40%;
+    top: -9px;
     background-color: brown;
-    border-radius: 15px;
+    border-radius: 1.5rem;
     padding: 20px 35px;
     display: flex;
     flex-direction: column;
@@ -41,6 +43,7 @@ main{
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.2);
+    position: absolute;
 }
 .left-upper{
     display: flex;
@@ -51,20 +54,33 @@ main{
 .date,.month,.year{
     padding-left: 4px;
 }
-.temperature, .left-bottom i{
-    font-size: 40px;
+.temperature, .icon{
+    font-size: 3rem;
     font-weight: 800;
 }
 .weather{
-    font-size: 25px;
+    font-size: 1.5rem;
+}
+.more-details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.more-details i{
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border: 1px solid rgb(66, 97, 107);
 }
 .right-info{
-
     height: 100%;
     width: 60%;
     display: flex;
     flex-direction: column;
-    justify-self: center;
+    margin-left: 40%;
     padding: 15px 30px;
     margin-top: 20px;
 }
