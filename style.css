@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+html,body {
+    height: 100%;
+    width: 100%;
+}
+main{
+    height: 100%;
+    width: 100%;
+    background-color: #37474f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    height: 50%;
+    width: 40%;
+    display: flex;
+    background-color: #232931;
+    flex-wrap: wrap;
+    position: relative;
+    border-radius: 15px;
+    color: #fff;
+}
+.left-info{
+    height: 100%;
+    width: 40%;
+    background-color: brown;
+    border-radius: 15px;
+    padding: 20px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url(daniel-roe-lpjb_UMOyx8-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.2);
+}
+.left-upper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #000;
+}
+.date,.month,.year{
+    padding-left: 4px;
+}
+.temperature, .left-bottom i{
+    font-size: 40px;
+    font-weight: 800;
+}
+.weather{
+    font-size: 25px;
+}
+.right-info{
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    padding: 15px 30px;
+    margin-top: 20px;
+}
+.location{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.more-info,.weekend-info,.more-info-des{
+    display: flex;
+    gap: 10px;
+}
+.more-info{
+    flex-direction: column;
+    margin-bottom:40px;
+}
+.more-info-des{
+    justify-content: space-between;
+}
+.weekend-info{
+    height:90px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    font-size: 20px;
+    justify-content: space-between;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+}
+.day-info{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    font-size: 15px;
+
+}
+.day-info i{
+    font-size: 30px;
+}
+.day-info:hover{
+    background-color: white;
+    transform: scale(1.1);
+    cursor: pointer;
+    color: #000;
+}
+.search-bar{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 25%;
+    gap: 15px;
+}
+.search-bar input,.search-bar button{
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+} 
+.search-bar button{
+    background-color: #303f9f;
+    color: white;
+    cursor: pointer;
+    font-weight: 700;
+    outline: none;
+}
+.search-bar input{
+    padding-left: 5px;
+}

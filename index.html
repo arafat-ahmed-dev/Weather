@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="left-info">
+                <div class="left-upper">
+                    <h1 class="day"></h1>
+                    <p class="date"></p>
+                    <div class="location">
+                        <i class="ri-map-pin-add-line"></i>
+                        <p class="location-info">Paris, PR</p>
+                    </div>
+                </div>
+                <div class="left-bottom">
+                    <div class="icon">
+                    </div>
+                    <p class="temperature">25°</p>
+                    <p class="weather">Sunny</p>
+                </div>
+            </div>
+            <div class="right-info">
+                <div class="more-info">
+                    <div class="more-info-des">
+                        <p>PRECIPITATION</p>
+                        <P class="PRECIPITATION">4%</P>
+                    </div>
+                    <div class="more-info-des">
+                        <p>HUMIDITY</p>
+                        <p  class="HUMIDITY">34%</p>
+                    </div>
+                    <div class="more-info-des">
+                        <p>WIND SPEED</p>
+                        <p  class="WIND-SPEED">6 km/h</p>
+                    </div>
+                </div>
+                <div class="weekend-info">
+                </div>
+                <div class="search-bar">
+                    <input class="search-input" type="search" placeholder="Search your location">
+                    <button class="search-btn">Search Location</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
