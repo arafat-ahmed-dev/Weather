@@ -1,3 +1,37 @@
-@media screen {
-    
-}media
+@media (max-width: 700px) {
+    .more-details i{
+        display: block;
+    }
+    main{
+        height: auto;
+        min-height: 100%;
+        padding-top: 20%;
+    }
+    .container{
+        height: auto;
+        /* min-height: 70%; */
+        width: 75%;
+        margin-bottom: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+    .left-info{
+        width: 100%;
+        min-height: 400px;
+        height: auto;
+    }
+    .weekend-info{
+        overflow-x: auto;
+    }
+    .right-info{
+        transition: height 0.5s ease; 
+        width: 100%;
+        height: 60%;
+    }
+    .short{
+        display: none;
+    }
+}

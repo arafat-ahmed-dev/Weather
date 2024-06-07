@@ -29,9 +29,9 @@ main{
     position: relative;
 }
 .left-info{
-    height: 105%;
+    height: 100%;
+    min-height: 400px;
     width: 40%;
-    top: -9px;
     background-color: brown;
     border-radius: 1.5rem;
     padding: 20px 35px;
@@ -43,7 +43,6 @@ main{
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.2);
-    position: absolute;
 }
 .left-upper{
     display: flex;
@@ -80,7 +79,6 @@ main{
     width: 60%;
     display: flex;
     flex-direction: column;
-    margin-left: 40%;
     padding: 15px 30px;
     margin-top: 20px;
 }
@@ -89,6 +87,9 @@ main{
     align-items: center;
     justify-content: center;
     gap: 5px;
+}
+.location i{
+    cursor: pointer;
 }
 .more-info,.weekend-info,.more-info-des{
     display: flex;

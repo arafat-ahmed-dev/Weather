@@ -8,6 +8,8 @@ const temperatureElement = document.querySelector('.temperature');
 const descriptionElement = document.querySelector('.weather');
 const weatherIconElement = document.querySelector('.icon');
 const daylist = document.querySelector('.weekend-info');
+const details = document.querySelector('.more-details i');
+const locationacc = document.querySelector('.location i');
 
 
 searchButton.addEventListener('click', () => {
@@ -16,6 +18,25 @@ searchButton.addEventListener('click', () => {
         fetchWeather(location);
     }
 });
+let a = 0;
+details.addEventListener("click", ()=>{
+    if (a === 0) {
+        document.querySelector(".short").style.display= "block";
+        a = 1;
+    } else if( a === 1) {
+        document.querySelector(".short").style.display= "none";
+        a = 0;
+    }
+})
+locationacc.addEventListener("click", ()=>{
+    if (a === 0) {
+        document.querySelector(".short").style.display= "block";
+        a = 1;
+    } else if( a === 1) {
+        document.querySelector(".short").style.display= "none";
+        a = 0;
+    }
+})
 
 window.addEventListener('load', () => {
     // Fetch weather data for Sylhet
