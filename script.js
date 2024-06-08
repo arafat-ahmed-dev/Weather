@@ -77,13 +77,15 @@ function fetchWeather(location) {
             temperatureElement.textContent = `${Math.round(data.list[0].main.temp)}°C`;
             descriptionElement.textContent = data.list[0].weather[0].description;
             const todayWeatherIconCode = data.list[0].weather[0].icon; // extract the iconcode from the api
-            const todayPrecipitation = `${data.list[0].pop}%`; // extract the precipitation from the api
+            const todayPrecipitation = `${data.list[0].pop}%`;  // extract the precipitation from the api
             const todayHumidity = `${data.list[0].main.humidity}%`; // extract the humidity from the api
-            const todayWindSpeed = `${data.list[0].wind.speed} km/h`; // extract the wind-speed from the api
+            const todayWindSpeed = `${data.list[0].wind.speed} km/h`;// extract the wind-speed from the api
+            const todayFeeLike = `${Math.round(data.list[0].main.feels_like)}°C`;// extract the FEEL-LIKE from the api
             const icon = weatherIconMap[todayWeatherIconCode]; // filter the iconcode with the weathericoncode
             document.querySelector(".PRECIPITATION").textContent = todayPrecipitation; // Change the precipitation by location
             document.querySelector(".HUMIDITY").textContent = todayHumidity; // Change the humidity by location
             document.querySelector(".WIND-SPEED").textContent = todayWindSpeed; // Change the wind-speed  by location
+            document.querySelector(".FEEL-LIKE").textContent = todayFeeLike; // Change the FEEL-LIKE  by location
             weatherIconElement.innerHTML = `<i class='bx bx-${icon}'></i>`; // tempareture icon show 
             const nextDaysData = data.list.slice(0,4);
             daylist.innerHTML = ''; // Clear the existing content
