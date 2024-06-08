@@ -1,5 +1,6 @@
 const apiKey = '772864e350fdb3ff4601e244ec562e2f';
 const apiUrl = 'https://api.openweathermap.org/data/2.5/forecast';
+const searchApiUrl = 'https://api.openweathermap.org/data/2.5/find';
 
 const locationInput = document.querySelector('.search-input');
 const searchButton = document.querySelector('.search-btn');
@@ -85,7 +86,6 @@ function fetchWeather(location) {
             document.querySelector(".WIND-SPEED").textContent = todayWindSpeed; // Change the wind-speed  by location
             weatherIconElement.innerHTML = `<i class='bx bx-${icon}'></i>`; // tempareture icon show 
             const nextDaysData = data.list.slice(0,4);
-            console.log(nextDaysData);
             daylist.innerHTML = ''; // Clear the existing content
             for (let i = 0; i < 4; i++) {
                 const weekendtemp = `${nextDaysData[i].main.temp}°C`;
@@ -118,3 +118,30 @@ function formatDate(dateTime) {
     document.querySelector(".day").textContent = `${day}`;
     return `${day}, ${date} ${month} ${year}`;
 }
+
+// // Auto-complete search bar logic
+// locationInput.addEventListener('input', async () => {
+//     const location = locationInput.value.trim();
+//     console.log(location);
+    
+//     if (location) {
+//     try {
+//         const response = await fetch(`${searchApiUrl}?q=${location}&appid=${apiKey}`);
+//         const data = await response.json();
+//         const suggestions = data.list.map(item => item.name);
+//         const suggestionList = document.querySelector('.suggestion-list');
+//         suggestionList.innerHTML = '';
+//     suggestions.forEach(suggestion => {
+//         const suggestionItem = document.createElement('div');
+//         suggestionItem.textContent = suggestion;
+//         suggestionItem.addEventListener('click', () => {
+//         locationInput.value = suggestion;
+//         fetchWeather(suggestion);
+//         });
+//         suggestionList.appendChild(suggestionItem);
+//     });
+//     } catch (error) {
+//     console.error('Error fetching auto-complete suggestions:', error);
+//     }
+// }
+// });
